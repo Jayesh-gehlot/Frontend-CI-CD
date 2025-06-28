@@ -1,0 +1,32 @@
+name: Delopy to dev ev
+
+on:
+  push:
+    branches:
+      - development
+
+    jobs:
+      deploy:
+        name: Delopy to dev
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout the code
+          - uses: actions/checkout@2
+
+          - name: Executing remote SSH commands
+            uses: appleboy/ssh-action@v1.2.0
+            with:
+               host: 13.60.167.174
+               username: ubuntu
+               key: ${{ secrets.PRIVATE_SSH_KEY }}
+               port: 22
+               script: |
+                 whoami 
+                 export NVM_DIR="$HOME/.nvm"
+                 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+                 cd Frontend-CI-CD 
+                 git pull origin development
+                 npm install
+                 npm run build 
+                 
