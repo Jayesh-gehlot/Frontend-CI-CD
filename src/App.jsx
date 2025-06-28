@@ -32,7 +32,7 @@ function App() {
     <>
     
     Hello buddy how are you 
-    what going on 
+    what going  
     </>
   )
 }
