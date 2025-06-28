@@ -21,6 +21,7 @@ on:
                username: ubuntu
                key: ${{ secrets.PRIVATE_SSH_KEY }}
                port: 22
+               echo : "Starting deployment"
                script: |
                  whoami 
                  export NVM_DIR="$HOME/.nvm"
