@@ -27,8 +27,6 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             cd Frontend-CI-CD 
-            git reset --hard
-            git clean -fd
             git pull origin development
             npm install
             npm run build 
