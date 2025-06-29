@@ -29,7 +29,7 @@ function App() {
     //     Click on the Vite and React logos to learn more
     //   </p>
     // </>
-    "Holy shit"
+    "Checking production ci"
   )
 }
 
