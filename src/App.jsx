@@ -29,7 +29,7 @@ function App() {
     //     Click on the Vite and React logos to learn more
     //   </p>
     // </>
-    "Hello swayam holy jayesh gehlot"
+    "Hello additya holy shit"
   )
 }
 
